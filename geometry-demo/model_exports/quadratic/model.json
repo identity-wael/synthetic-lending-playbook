@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "variant": "quadratic",
+  "coefficients": [
+    0.028046125973477932,
+    0.24689563826184013,
+    -8.362411481899429,
+    0.2556825413690068,
+    -8.829671204963248
+  ],
+  "intercept": 4.402196466907984,
+  "classes": [
+    0,
+    1
+  ],
+  "threshold": 0.5,
+  "selected_C": 10.0,
+  "input_order": [
+    "x1",
+    "x2"
+  ],
+  "input_domain": "Each coordinate in [-1,1]",
+  "label": "Inside radius sqrt(0.5), with independent 5% label flips",
+  "feature_order": [
+    "x1",
+    "x2",
+    "x1^2",
+    "x1*x2",
+    "x2^2"
+  ]
+}

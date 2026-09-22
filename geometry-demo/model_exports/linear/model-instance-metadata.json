@@ -1,0 +1,14 @@
+{
+  "ownerSlug": "waelelghazzawi",
+  "modelSlug": "synthetic-geometry-classifiers",
+  "instanceSlug": "linear",
+  "framework": "other",
+  "overview": "Two-feature linear logistic baseline; intentionally unable to represent a circular boundary.",
+  "usage": "# Synthetic Geometry: linear\n\nEducational binary logistic classifier. Apache-2.0. Created by Wael El Ghazzawi with OpenAI Codex assistance.\n\nInputs x1,x2 are uniform coordinates in [-1,1]. Label 1 means x1^2+x2^2 < 0.5, followed by independent 5% label flips. No validated real-world use.\n\nTrain:6000 points seed1201; validation:2000 seed1202; test:2000 seed1203. Select C among 0.1,1,10 by validation log loss, never test data. Metrics apply only to this noisy generator, without confidence intervals or external validation.\n\nJSON contains explicit feature order, coefficients and intercept. Transform inputs, take the coefficient dot product plus intercept, apply sigmoid, then threshold at 0.5. Test vectors verify other implementations. No pickle or executable weights. No fine-tuning API; retrain using source. Version1.\n\n\nTraining manifest and code: https://www.kaggle.com/code/waelelghazzawi/synthetic-geometry-train-and-export\n",
+  "licenseName": "Apache 2.0",
+  "fineTunable": false,
+  "trainingData": [
+    "Synthetic uniform 2D coordinates generated with NumPy; seeds1201,1202,1203"
+  ],
+  "modelInstanceType": "Unspecified"
+}

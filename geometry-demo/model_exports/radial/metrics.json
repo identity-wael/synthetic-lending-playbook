@@ -1,0 +1,11 @@
+{
+  "variant": "radial",
+  "selected_C": 10.0,
+  "validation_log_loss": 0.28731124452406165,
+  "test_accuracy": 0.948,
+  "test_log_loss": 0.2820229804247026,
+  "test_roc_auc": 0.9535238389455256,
+  "test_n": 2000,
+  "positive_fraction": 0.415,
+  "majority_accuracy": 0.585
+}

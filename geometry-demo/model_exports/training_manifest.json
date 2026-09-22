@@ -1,0 +1,20 @@
+{
+  "seeds": {
+    "train": 1201,
+    "validation": 1202,
+    "test": 1203
+  },
+  "sample_sizes": {
+    "train": 6000,
+    "validation": 2000,
+    "test": 2000
+  },
+  "numpy": "2.5.3",
+  "sklearn": "1.9.1",
+  "label_noise": 0.05,
+  "split_sha256": {
+    "train": "15a79f39308fb84fdb97851e865d0bf375894a36321aa83ae41d69398cf7639a",
+    "validation": "8e39c32d721274279ca73a40c33f04e296d6fc3e823c20bc5addf72c62d4c8a0",
+    "test": "9a8ee796ec4a9f92bbbcb6bd797c9e167d2fbc2448b3c866a89429307e9a9733"
+  }
+}

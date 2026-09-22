@@ -1,0 +1,11 @@
+{
+  "variant": "quadratic",
+  "selected_C": 10.0,
+  "validation_log_loss": 0.2899138466719333,
+  "test_accuracy": 0.9455,
+  "test_log_loss": 0.2813846956917228,
+  "test_roc_auc": 0.9537215528781795,
+  "test_n": 2000,
+  "positive_fraction": 0.415,
+  "majority_accuracy": 0.585
+}

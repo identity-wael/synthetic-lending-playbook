@@ -1,0 +1,11 @@
+{
+  "variant": "linear",
+  "selected_C": 0.1,
+  "validation_log_loss": 0.6742042519421514,
+  "test_accuracy": 0.585,
+  "test_log_loss": 0.6788289152509035,
+  "test_roc_auc": 0.5086695499948511,
+  "test_n": 2000,
+  "positive_fraction": 0.415,
+  "majority_accuracy": 0.585
+}

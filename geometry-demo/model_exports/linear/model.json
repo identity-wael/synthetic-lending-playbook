@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "variant": "linear",
+  "coefficients": [
+    0.028084000634300277,
+    0.048750803901591394
+  ],
+  "intercept": -0.3902531019847493,
+  "classes": [
+    0,
+    1
+  ],
+  "threshold": 0.5,
+  "selected_C": 0.1,
+  "input_order": [
+    "x1",
+    "x2"
+  ],
+  "input_domain": "Each coordinate in [-1,1]",
+  "label": "Inside radius sqrt(0.5), with independent 5% label flips",
+  "feature_order": [
+    "x1",
+    "x2"
+  ]
+}
