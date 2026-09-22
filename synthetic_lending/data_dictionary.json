@@ -1,0 +1,24 @@
+{
+  "loans.csv": {
+    "loan_id": "Unique fictional loan identifier; no relationship to a real person.",
+    "origination_date": "YYYY-MM-DD month-end; first installment due at following month-end.",
+    "segment": "Hand-set payment-probability scenario A/B/C, not a real risk grade.",
+    "principal_usd": "Original contractual principal, fictional USD.",
+    "annual_rate": "Nominal annual interest rate as a fraction; monthly rate = annual_rate / 12; excludes fees.",
+    "term_months": "Number of contractual monthly installments (36, 48 or 60).",
+    "monthly_payment_usd": "Unrounded level contractual installment, fictional USD."
+  },
+  "monthly_performance.csv": {
+    "loan_id": "Foreign key to loans.csv.",
+    "observation_date": "YYYY-MM-DD month-end snapshot after this month's simulated payment.",
+    "months_on_book": "Installments scheduled since origination, starting at 1.",
+    "installments_paid": "Whole installments paid this month, allocated oldest first; integer 0\u20133.",
+    "payment_received_usd": "installments_paid * contractual monthly payment; fictional USD.",
+    "unpaid_installments": "Count of installments remaining unpaid after allocation, including amounts due today.",
+    "oldest_unpaid_due_date": "Oldest unpaid due date, YYYY-MM-DD; blank only when queue is empty.",
+    "overdue_scheduled_amount_usd": "Unpaid installment count * payment; includes newly due amount. No late fees or penalty interest.",
+    "dpd": "Calendar days since oldest unpaid due date; zero when current or only today's installment is unpaid.",
+    "scheduled_principal_usd": "Contractual principal assuming all installments were paid on time; NOT actual principal balance.",
+    "dpd_bucket": "Current / due today, 1\u201329, 30\u201359, 60\u201389, or 90+ calendar days."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "synthetic": true,
+  "seed": 20260922,
+  "loan_count": 1500,
+  "cutoff": "2026-08-31",
+  "monthly_rows": 22743,
+  "license": "CC0-1.0",
+  "versions": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2"
+  },
+  "sha256": {
+    "loans.csv": "c1625f9f46d0f0dbbabc08281ee1d73e603060ded3d3fd088e8308c9511cf7f5",
+    "monthly_performance.csv": "e5860bc6af994595396fe31f17128f760e07cbb4b423800a3f6677d67c672405"
+  }
+}
