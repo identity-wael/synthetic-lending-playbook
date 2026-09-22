@@ -55,3 +55,9 @@ The GitHub repository, Kaggle generator notebook, reusable utility, and companio
 - Colab copy: https://colab.research.google.com/drive/1pC9oquO3CtI1CdC5cJl6uap9bZhpgPWJ (owner access; full run passed)
 
 The dataset was created from notebook outputs, documented, tagged Synthetic, and licensed CC0. No automatic GitHub synchronization is enabled. Kaggle distributes public notebooks under its Apache-2.0 publication license; the original generator, utility, and data are additionally offered here under CC0. The new `published_dataset_walkthrough.ipynb` is Apache-2.0 and reads the published dataset rather than regenerating it.
+
+## R companion
+
+`synthetic_lending_r.ipynb` provides a base-R portfolio analysis, scenario chart, monthly delinquency and payment charts, and two summary CSV exports. It passed Kaggle Save & Run All using R 4.4.0 in 15.1 seconds, including integrity, calendar DPD and denominator assertions. This companion is Apache-2.0 licensed.
+
+Public notebook: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-portfolio-analysis-in-r
