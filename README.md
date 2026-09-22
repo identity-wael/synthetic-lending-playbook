@@ -29,7 +29,7 @@ Payment probabilities and segment relationships are manually selected instructio
 
 ## Validation
 
-A clean local kernel and Kaggle Save & Run All (version 1, 25.4 seconds) completed the full notebook successfully. Assertions check amortization (including zero and near-zero rates), invalid inputs, FIFO payment allocation across unequal-length calendar months, unique keys, referential integrity, payment conservation, observation dates, scheduled balances, same-seed reproducibility, transition denominators, vintage eligibility and exported schemas/row counts.
+A clean local kernel and Kaggle Save & Run All (versions 1 and 2; version 2 imported directly from GitHub) completed the full notebook successfully. Assertions check amortization (including zero and near-zero rates), invalid inputs, FIFO payment allocation across unequal-length calendar months, unique keys, referential integrity, payment conservation, observation dates, scheduled balances, same-seed reproducibility, transition denominators, vintage eligibility and exported schemas/row counts.
 
 Development used OpenAI Codex assistance. Executable tests establish internal consistency, not empirical realism or independent human review.
 
@@ -44,3 +44,11 @@ Source: https://github.com/identity-wael/synthetic-lending-playbook
 Kaggle: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-payments-to-delinquency
 
 To publish an update: execute all cells in a clean local kernel, commit the tested notebook, import its GitHub URL using File > Import Notebook in Kaggle, then use Save & Run All. Check the saved run before publishing. Importing copies a snapshot; GitHub pushes do not automatically update Kaggle.
+
+## Publication status (September 22, 2026)
+
+The GitHub repository is public. Kaggle version 2 was imported using the GitHub import tab from commit `536b392` and completed successfully. The notebook and companion dataset are saved privately because Kaggle requires phone verification before public notebook sharing.
+
+Companion dataset: https://www.kaggle.com/datasets/waelelghazzawi/synthetic-lending-portfolio-and-monthly-payments
+
+The dataset was created from notebook outputs, documented, tagged Synthetic, and licensed CC0. No automatic GitHub synchronization or credential-based publishing has been enabled.
