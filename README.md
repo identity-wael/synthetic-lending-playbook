@@ -77,4 +77,12 @@ Public report: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-vint
 - [Inference audit](https://www.kaggle.com/code/waelelghazzawi/synthetic-geometry-published-model-audit)
 - [Decision calibration audit](https://www.kaggle.com/code/waelelghazzawi/synthetic-geometry-decision-calibration-audit)
 
+## Kaggle LLM Benchmarks
+
+`benchmarks/` contains an Apache-2.0 Kaggle Benchmark task evaluating LLMs on synthetic geometric decision boundaries and logistic probability calibration using the official `kaggle-benchmarks` SDK.
+
+- Task: `synthetic-geometric-decision-boundary-reasoning`
+- Code: [`benchmarks/geometric_reasoning_task.py`](file:///Users/wael/kaggle/benchmarks/geometric_reasoning_task.py)
+- Unit tests: [`benchmarks/test_geometric_reasoning_task.py`](file:///Users/wael/kaggle/benchmarks/test_geometric_reasoning_task.py)
+
 `validation-reference-results/` contains CC0 expected-versus-observed results for the synthetic data-quality fixtures. All published files were downloaded and compared byte-for-byte with the tested originals.
