@@ -1,0 +1,17 @@
+{
+  "id": "waelelghazzawi/titanic-decision-calibration-benchmark",
+  "title": "Titanic Decision Calibration Benchmark",
+  "code_file": "titanic_calibration_benchmark.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "competition_sources": [
+    "titanic"
+  ],
+  "model_sources": [
+    "waelelghazzawi/synthetic-geometry-classifiers/Other/comparison-bundle/1"
+  ]
+}

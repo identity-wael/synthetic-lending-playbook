@@ -85,4 +85,13 @@ Public report: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-vint
 - Code: [`benchmarks/geometric_reasoning_task.py`](file:///Users/wael/kaggle/benchmarks/geometric_reasoning_task.py)
 - Unit tests: [`benchmarks/test_geometric_reasoning_task.py`](file:///Users/wael/kaggle/benchmarks/test_geometric_reasoning_task.py)
 
+## Competition Calibration Benchmark
+
+`titanic-demo/` contains an Apache-2.0 competition solution integrating Kaggle Model Hub pre-trained models with tabular feature engineering and probability calibration for the Titanic competition.
+
+- Notebook: [Titanic Decision Calibration Benchmark](https://www.kaggle.com/code/waelelghazzawi/titanic-decision-calibration-benchmark)
+- Code: [`titanic-demo/titanic_model.py`](file:///Users/wael/kaggle/titanic-demo/titanic_model.py)
+- Unit tests: [`titanic-demo/test_titanic_model.py`](file:///Users/wael/kaggle/titanic-demo/test_titanic_model.py)
+
 `validation-reference-results/` contains CC0 expected-versus-observed results for the synthetic data-quality fixtures. All published files were downloaded and compared byte-for-byte with the tested originals.
+

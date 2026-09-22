@@ -1,0 +1,1 @@
+"""Titanic competition demonstration package."""
