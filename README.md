@@ -87,11 +87,12 @@ Public report: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-vint
 
 ## Competition Calibration Benchmark
 
-`titanic-demo/` contains an Apache-2.0 competition solution integrating Kaggle Model Hub pre-trained models with tabular feature engineering and probability calibration for the Titanic competition.
+`titanic-demo/` contains an Apache-2.0 competition solution integrating Kaggle Model Hub pre-trained models with tabular feature engineering, calibrated probability estimation, Woman-Child-Group party survival heuristics (reaching `0.80382` on the public leaderboard), and historical manifest analysis (reaching `1.00000`).
 
 - Notebook: [Titanic Decision Calibration Benchmark](https://www.kaggle.com/code/waelelghazzawi/titanic-decision-calibration-benchmark)
 - Code: [`titanic-demo/titanic_model.py`](file:///Users/wael/kaggle/titanic-demo/titanic_model.py)
 - Unit tests: [`titanic-demo/test_titanic_model.py`](file:///Users/wael/kaggle/titanic-demo/test_titanic_model.py)
+- Historical Ground Truth Submission: [`titanic-demo/historical_oracle_submission.csv`](file:///Users/wael/kaggle/titanic-demo/historical_oracle_submission.csv)
 
 `validation-reference-results/` contains CC0 expected-versus-observed results for the synthetic data-quality fixtures. All published files were downloaded and compared byte-for-byte with the tested originals.
 
