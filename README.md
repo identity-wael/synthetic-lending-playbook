@@ -75,5 +75,6 @@ Public report: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-vint
 - [Models](https://www.kaggle.com/models/waelelghazzawi/synthetic-geometry-classifiers)
 - [Training](https://www.kaggle.com/code/waelelghazzawi/synthetic-geometry-train-and-export)
 - [Inference audit](https://www.kaggle.com/code/waelelghazzawi/synthetic-geometry-published-model-audit)
+- [Decision calibration audit](https://www.kaggle.com/code/waelelghazzawi/synthetic-geometry-decision-calibration-audit)
 
 `validation-reference-results/` contains CC0 expected-versus-observed results for the synthetic data-quality fixtures. All published files were downloaded and compared byte-for-byte with the tested originals.
