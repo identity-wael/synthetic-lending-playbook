@@ -16,3 +16,11 @@ Run `python lending_utils.py` for five tests covering independent amortization r
 Uses Python standard library only. Whole installments only; excess payments are capped. Due dates must be strictly increasing calendar dates. Scheduled balance assumes on-time repayment and is not an accounting balance. No fees, partial payments, charge-offs, currency rounding, or legal default determination. Developed with OpenAI Codex assistance.
 
 On Kaggle, add the saved utility script through the notebook input picker, then use the import name provided by Kaggle. The downloadable module can be imported directly as shown above.
+
+## Validation and Kaggle status
+
+Five tests passed locally and on Kaggle (version 1, 25-second successful run). A separate local smoke check verified silent import. Kaggle shows the Utility Script tag.
+
+Kaggle: https://www.kaggle.com/code/waelelghazzawi/lending-utilities-payments-and-calendar-dpd
+
+Saved privately because account phone verification is still unresolved.
