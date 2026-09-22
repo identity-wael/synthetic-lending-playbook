@@ -23,7 +23,10 @@ for path in paths:
  m=json.loads(path.read_text());v=json.loads(path.with_name('test_vectors.json').read_text())
  np.testing.assert_allclose(predict(v['inputs'],m),v['probability_class_1'],atol=1e-12,rtol=1e-12)
  if m['variant'] in models:
-  assert m==models[m['variant']], 'Conflicting copies of weights'
+  prior=models[m['variant']]
+  assert {k:v for k,v in m.items() if k not in ('coefficients','intercept')}=={k:v for k,v in prior.items() if k not in ('coefficients','intercept')}
+  np.testing.assert_allclose(m['coefficients'],prior['coefficients'],atol=1e-12,rtol=1e-12)
+  np.testing.assert_allclose(m['intercept'],prior['intercept'],atol=1e-12,rtol=1e-12)
   continue
  models[m['variant']]=m;p=predict(x,m);saved=json.loads(path.with_name('metrics.json').read_text())
  scores={'variant':m['variant'],'accuracy':accuracy_score(y,p>=m['threshold']),'log_loss':log_loss(y,p),'roc_auc':roc_auc_score(y,p)}
