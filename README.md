@@ -35,7 +35,7 @@ Development used OpenAI Codex assistance. Executable tests establish internal co
 
 ## License
 
-Notebook, documentation and generated data: CC0 1.0 Universal, https://creativecommons.org/publicdomain/zero/1.0/ . Dependency licenses remain their own.
+Original generator notebook, utility, documentation and generated data: CC0 1.0 Universal, https://creativecommons.org/publicdomain/zero/1.0/ . The companion `published_dataset_walkthrough.ipynb` is Apache-2.0. Dependency licenses remain their own.
 
 ## GitHub to Kaggle
 
@@ -51,6 +51,7 @@ The GitHub repository, Kaggle generator notebook, reusable utility, and companio
 
 - Dataset: https://www.kaggle.com/datasets/waelelghazzawi/synthetic-lending-portfolio-and-monthly-payments
 - Utility: https://www.kaggle.com/code/waelelghazzawi/lending-utilities-payments-and-calendar-dpd
+- Published-data walkthrough: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-published-data-walkthrough (passed locally and on Kaggle; saved run 22.6 seconds)
 - Colab copy: https://colab.research.google.com/drive/1pC9oquO3CtI1CdC5cJl6uap9bZhpgPWJ (owner access; full run passed)
 
 The dataset was created from notebook outputs, documented, tagged Synthetic, and licensed CC0. No automatic GitHub synchronization is enabled. Kaggle distributes public notebooks under its Apache-2.0 publication license; the original generator, utility, and data are additionally offered here under CC0. The new `published_dataset_walkthrough.ipynb` is Apache-2.0 and reads the published dataset rather than regenerating it.
