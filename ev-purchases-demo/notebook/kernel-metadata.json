@@ -1,0 +1,18 @@
+{
+  "id": "waelelghazzawi/s6e9-ev-rank-space-boundary-ensemble",
+  "title": "S6E9 EV Rank Space Boundary Ensemble",
+  "code_file": "s6e9_ev_rank_space_boundary_ensemble.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "false",
+  "enable_gpu": "false",
+  "enable_tpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": [
+    "defiaudit/s6e9-realmlp-oof"
+  ],
+  "competition_sources": [
+    "playground-series-s6e9"
+  ],
+  "kernel_sources": []
+}

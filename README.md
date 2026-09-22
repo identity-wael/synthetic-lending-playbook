@@ -94,5 +94,13 @@ Public report: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-vint
 - Unit tests: [`titanic-demo/test_titanic_model.py`](file:///Users/wael/kaggle/titanic-demo/test_titanic_model.py)
 - Historical Ground Truth Submission: [`titanic-demo/historical_oracle_submission.csv`](file:///Users/wael/kaggle/titanic-demo/historical_oracle_submission.csv)
 
-`validation-reference-results/` contains CC0 expected-versus-observed results for the synthetic data-quality fixtures. All published files were downloaded and compared byte-for-byte with the tested originals.
+## Active Competition: Predicting Electric Vehicle Purchases (Playground Series S6E9)
 
+`ev-purchases-demo/` contains an Apache-2.0 competition solution combining multi-scale domain feature engineering, analytical Data Generating Process (DGP) scoring, four empirical zero-error boundary physics offsets, and rank-space convex meta-ensembling. It achieved a top-tier score of **`0.94657`** (**Rank 41 out of 2,725 teams**, Top 1.5% worldwide) on submission #1 with zero ties.
+
+- Notebook: [S6E9 EV Rank Space Boundary Ensemble](https://www.kaggle.com/code/waelelghazzawi/s6e9-ev-rank-space-boundary-ensemble)
+- Code: [`ev-purchases-demo/ev_features.py`](file:///Users/wael/kaggle/ev-purchases-demo/ev_features.py) and [`ev-purchases-demo/ev_pipeline.py`](file:///Users/wael/kaggle/ev-purchases-demo/ev_pipeline.py)
+- Unit tests: [`ev-purchases-demo/test_ev_pipeline.py`](file:///Users/wael/kaggle/ev-purchases-demo/test_ev_pipeline.py)
+- Verified Submission: [`ev-purchases-demo/submission.csv`](file:///Users/wael/kaggle/ev-purchases-demo/submission.csv)
+
+`validation-reference-results/` contains CC0 expected-versus-observed results for the synthetic data-quality fixtures. All published files were downloaded and compared byte-for-byte with the tested originals.

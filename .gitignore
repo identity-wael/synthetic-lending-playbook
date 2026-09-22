@@ -7,3 +7,5 @@ kaggle.json
 *.run.json
 *.task.json
 output/
+ev-purchases-demo/data/
+ev-purchases-demo/submission.csv
