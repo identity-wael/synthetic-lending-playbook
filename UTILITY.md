@@ -23,4 +23,4 @@ Five tests passed locally and on Kaggle (version 1, 25-second successful run). A
 
 Kaggle: https://www.kaggle.com/code/waelelghazzawi/lending-utilities-payments-and-calendar-dpd
 
-Saved privately because account phone verification is still unresolved.
+Published publicly on Kaggle on September 22, 2026.

@@ -47,8 +47,10 @@ To publish an update: execute all cells in a clean local kernel, commit the test
 
 ## Publication status (September 22, 2026)
 
-The GitHub repository is public. Kaggle version 2 was imported using the GitHub import tab from commit `536b392` and completed successfully. The notebook and companion dataset are saved privately because Kaggle requires phone verification before public notebook sharing.
+The GitHub repository, Kaggle generator notebook, reusable utility, and companion dataset are public. Both generator versions passed Kaggle Save & Run All; version 2 was imported directly from GitHub. The utility passed five tests locally and on Kaggle.
 
-Companion dataset: https://www.kaggle.com/datasets/waelelghazzawi/synthetic-lending-portfolio-and-monthly-payments
+- Dataset: https://www.kaggle.com/datasets/waelelghazzawi/synthetic-lending-portfolio-and-monthly-payments
+- Utility: https://www.kaggle.com/code/waelelghazzawi/lending-utilities-payments-and-calendar-dpd
+- Colab copy: https://colab.research.google.com/drive/1pC9oquO3CtI1CdC5cJl6uap9bZhpgPWJ (owner access; full run passed)
 
-The dataset was created from notebook outputs, documented, tagged Synthetic, and licensed CC0. No automatic GitHub synchronization or credential-based publishing has been enabled.
+The dataset was created from notebook outputs, documented, tagged Synthetic, and licensed CC0. No automatic GitHub synchronization is enabled. Kaggle distributes public notebooks under its Apache-2.0 publication license; the original generator, utility, and data are additionally offered here under CC0. The new `published_dataset_walkthrough.ipynb` is Apache-2.0 and reads the published dataset rather than regenerating it.
