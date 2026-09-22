@@ -1,0 +1,12 @@
+case_id,expected_findings,detected_findings,passed
+clean_current,0,0,True
+clean_leap_year,0,0,True
+clean_due_today,0,0,True
+duplicate_key,2,2,True
+missing_date,1,1,True
+invalid_date,1,1,True
+unknown_loan,1,1,True
+wrong_dpd,1,1,True
+queue_mismatch,1,1,True
+wrong_payment,1,1,True
+negative_payment,1,1,True

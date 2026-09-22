@@ -67,3 +67,13 @@ Public notebook: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-po
 `synthetic_lending_vintages.Rmd` compares origination cohorts at MOB 6, reports observed counts and coverage, and contrasts this with a common-calendar snapshot. It passed a Kaggle saved run in 6.3 seconds, with all three validation groups passing and two summary CSV exports. The report is Apache-2.0 licensed.
 
 Public report: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-vintage-analysis-in-r-markdown
+
+## Published geometry model audit
+
+`geometry-demo/` contains Apache-2.0 training and inference examples with entirely synthetic coordinates. The inference notebook loads versioned Model Hub weights, checks test vectors and held-out metrics, and visualizes decision surfaces without retraining. These files are an explicit exception to the repository CC0 default.
+
+- [Models](https://www.kaggle.com/models/waelelghazzawi/synthetic-geometry-classifiers)
+- [Training](https://www.kaggle.com/code/waelelghazzawi/synthetic-geometry-train-and-export)
+- [Inference audit](https://www.kaggle.com/code/waelelghazzawi/synthetic-geometry-published-model-audit)
+
+`validation-reference-results/` contains CC0 expected-versus-observed results for the synthetic data-quality fixtures. All published files were downloaded and compared byte-for-byte with the tested originals.

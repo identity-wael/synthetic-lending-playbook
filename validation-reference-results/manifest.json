@@ -1,0 +1,16 @@
+{
+  "source_commit": "7e40b24b475cb6dc6dc618821386547f3b225d95",
+  "fixture_sha256": {
+    "README.md": "e659cc580a1f620783abd4afede2008b7d2a014d7fe6b51e2b63d23ccf2829bd",
+    "cases.csv": "18c9cb0eac8b4bd371c4aec761f93d1efcdb7b06eb3bc051851120fd97ab8014",
+    "expected_violations.csv": "85865aebf5701f85b06c2c6a0b21f44bab4d98dfaa7a53c20daf446a55774b21",
+    "loans.csv": "64c7f54e5ba1d1ecc9e6d94e32eca107f3c8e501e13b46b2323ddd99f1d4b266",
+    "observations.csv": "93b93612c7dd4d6744c971850f5ba43bf282235216db5d75315bef4a1fc86c90",
+    "validate.py": "277d95b9d3e1df636f3371fdbbb5018e8db6103a0acf4451163d6ec418796bd4"
+  },
+  "case_count": 11,
+  "expected_findings": 9,
+  "unexpected_findings": 0,
+  "missing_findings": 0,
+  "synthetic": true
+}
