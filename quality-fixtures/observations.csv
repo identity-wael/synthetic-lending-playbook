@@ -1,0 +1,13 @@
+case_id,record_id,loan_id,observation_date,oldest_unpaid_due_date,dpd,unpaid_installments,installments_paid,monthly_payment_usd,payment_received_usd
+clean_current,r01,SYN-TEST-001,2026-03-31,,0,0,1,100.00,100.00
+clean_leap_year,r02,SYN-TEST-001,2024-03-31,2024-02-29,31,1,1,100.00,100.00
+clean_due_today,r03,SYN-TEST-001,2026-03-31,2026-03-31,0,1,1,100.00,100.00
+duplicate_key,r04,SYN-TEST-001,2026-03-31,,0,0,1,100.00,100.00
+duplicate_key,r05,SYN-TEST-001,2026-03-31,,0,0,1,100.00,100.00
+missing_date,r06,SYN-TEST-001,,,0,0,1,100.00,100.00
+invalid_date,r07,SYN-TEST-001,2026-02-30,,0,0,1,100.00,100.00
+unknown_loan,r08,SYN-UNKNOWN,2026-03-31,,0,0,1,100.00,100.00
+wrong_dpd,r09,SYN-TEST-001,2026-03-31,2026-02-28,30,1,1,100.00,100.00
+queue_mismatch,r10,SYN-TEST-001,2026-03-31,,0,1,1,100.00,100.00
+wrong_payment,r11,SYN-TEST-001,2026-03-31,,0,0,1,100.00,99.00
+negative_payment,r12,SYN-TEST-001,2026-03-31,,0,0,-1,100.00,-100.00

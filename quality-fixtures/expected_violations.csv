@@ -1,0 +1,10 @@
+case_id,record_id,rule
+duplicate_key,r04,duplicate_observation
+duplicate_key,r05,duplicate_observation
+missing_date,r06,missing_observation_date
+invalid_date,r07,invalid_observation_date
+unknown_loan,r08,unknown_loan
+wrong_dpd,r09,calendar_dpd_mismatch
+queue_mismatch,r10,unpaid_date_mismatch
+wrong_payment,r11,payment_total_mismatch
+negative_payment,r12,negative_payment

@@ -1,0 +1,12 @@
+case_id,expected_violation_count
+clean_current,0
+clean_leap_year,0
+clean_due_today,0
+duplicate_key,2
+missing_date,1
+invalid_date,1
+unknown_loan,1
+wrong_dpd,1
+queue_mismatch,1
+wrong_payment,1
+negative_payment,1
