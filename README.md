@@ -61,3 +61,9 @@ The dataset was created from notebook outputs, documented, tagged Synthetic, and
 `synthetic_lending_r.ipynb` provides a base-R portfolio analysis, scenario chart, monthly delinquency and payment charts, and two summary CSV exports. It passed Kaggle Save & Run All using R 4.4.0 in 15.1 seconds, including integrity, calendar DPD and denominator assertions. This companion is Apache-2.0 licensed.
 
 Public notebook: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-portfolio-analysis-in-r
+
+## R Markdown vintage report
+
+`synthetic_lending_vintages.Rmd` compares origination cohorts at MOB 6, reports observed counts and coverage, and contrasts this with a common-calendar snapshot. It passed a Kaggle saved run in 6.3 seconds, with all three validation groups passing and two summary CSV exports. The report is Apache-2.0 licensed.
+
+Public report: https://www.kaggle.com/code/waelelghazzawi/synthetic-lending-vintage-analysis-in-r-markdown

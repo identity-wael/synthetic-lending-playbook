@@ -1,0 +1,91 @@
+---
+title: "Synthetic Lending: Vintage Analysis in R"
+author: "Wael El Ghazzawi"
+output: html_document
+---
+
+## Purpose
+
+Compare origination cohorts at the same months-on-book (MOB), so older loans do not receive more observation time simply because they entered the portfolio earlier. This report describes fictional payment scenarios; it does not estimate real borrower risk or causality. Developed with OpenAI Codex assistance. Report license: Apache-2.0; source data: CC0-1.0.
+
+[Dataset](https://www.kaggle.com/datasets/waelelghazzawi/synthetic-lending-portfolio-and-monthly-payments) · [Source project](https://github.com/identity-wael/synthetic-lending-playbook)
+
+## Load and validate the published panel
+
+```{r}
+root <- if (dir.exists('/kaggle/input')) '/kaggle/input' else 'synthetic_lending'
+paths <- list.files(root, pattern='^loans[.]csv$', recursive=TRUE, full.names=TRUE)
+stopifnot(length(paths) == 1L)
+folder <- dirname(paths[1])
+loans <- read.csv(file.path(folder, 'loans.csv'), stringsAsFactors=FALSE)
+panel <- read.csv(file.path(folder, 'monthly_performance.csv'), stringsAsFactors=FALSE)
+loans$origination_date <- as.Date(loans$origination_date)
+panel$observation_date <- as.Date(panel$observation_date)
+stopifnot(nrow(loans)==1500L, nrow(panel)==22743L, !anyDuplicated(loans$loan_id),
+          !anyDuplicated(panel[c('loan_id','months_on_book')]),
+          setequal(loans$loan_id, panel$loan_id))
+loans$vintage <- format(loans$origination_date, '%Y-%m')
+x <- merge(panel, loans[c('loan_id','origination_date','vintage')], by='loan_id')
+stopifnot(nrow(x)==nrow(panel), !anyNA(x$vintage))
+calendar_mob <- (as.integer(format(x$observation_date,'%Y')) - as.integer(format(x$origination_date,'%Y'))) * 12L +
+  as.integer(format(x$observation_date,'%m')) - as.integer(format(x$origination_date,'%m'))
+stopifnot(all(calendar_mob == x$months_on_book))
+cat('PASS: unique loan-age observations, joins and calendar MOB\n')
+```
+
+## Fixed-age comparison at MOB 6
+
+Include only loans observed at MOB 6. The numerator counts accounts with DPD at least 30 **at that observation**, not accounts ever delinquent. The denominator is all eligible accounts in that origination cohort. Show coverage explicitly: incomplete cohorts should never silently use their full origination count as the denominator.
+
+```{r}
+target_mob <- 6L
+eligible <- x[x$months_on_book == target_mob, ]
+stopifnot(nrow(eligible)>0L, !anyDuplicated(eligible$loan_id))
+cohorts <- sort(unique(loans$vintage))
+report <- do.call(rbind, lapply(cohorts, function(v) {
+  z <- eligible[eligible$vintage == v, ]
+  total <- sum(loans$vintage == v)
+  data.frame(vintage=v, originated=total, observed_at_mob6=nrow(z),
+             coverage=nrow(z)/total, overdue_30_plus=sum(z$dpd>=30),
+             overdue_share=if(nrow(z)) mean(z$dpd>=30) else NA_real_)
+}))
+stopifnot(sum(report$observed_at_mob6)==nrow(eligible),
+          all(report$observed_at_mob6 <= report$originated),
+          all(report$overdue_30_plus <= report$observed_at_mob6),
+          isTRUE(all.equal(sum(report$overdue_30_plus)/sum(report$observed_at_mob6), mean(eligible$dpd>=30))))
+print(report, row.names=FALSE)
+plot_rows <- report$observed_at_mob6>0
+op <- par(mar=c(8,4,3,1))
+barplot(100*report$overdue_share[plot_rows], names.arg=report$vintage[plot_rows],
+        las=2, col='#1976A3', ylab='Accounts 30+ DPD (%)', main='Origination cohorts at MOB 6')
+par(op)
+cat('PASS: cohort counts, coverage and pooled-rate reconciliation\n')
+```
+
+## Why calendar-time snapshots answer a different question
+
+At the common cutoff, cohort ages differ. Compare the table below with the fixed-age table above. Neither view is automatically wrong: one compares equal account ages, while the other describes the portfolio on one date. Neither controls for scenario composition or calendar conditions.
+
+```{r}
+cutoff <- max(x$observation_date)
+latest <- x[x$observation_date==cutoff, ]
+stopifnot(!anyDuplicated(latest$loan_id), nrow(latest)==nrow(loans))
+comparison <- do.call(rbind,lapply(cohorts,function(v) {
+ z <- latest[latest$vintage==v, ]
+ data.frame(vintage=v, cutoff=as.character(cutoff), accounts=nrow(z),
+            min_mob=min(z$months_on_book), max_mob=max(z$months_on_book),
+            overdue_share_at_cutoff=mean(z$dpd>=30))
+}))
+print(comparison, row.names=FALSE)
+write.csv(report,'vintage_mob6_summary.csv',row.names=FALSE)
+write.csv(comparison,'vintage_calendar_snapshot.csv',row.names=FALSE)
+cat('PASS: common-cutoff coverage and two summary exports\n')
+```
+
+## Interpretation and limits
+
+Scenario probabilities are hand-set in the generator. Differences between cohorts may reflect their scenario mix and simulation randomness. Small denominators can make rates volatile. These charts are descriptive checks, not forecasts or evidence about real customers.
+
+The simulation has whole-installment payments and omits partial payments, charge-offs, recoveries, prepayments and closures. Scheduled principal is not an accounting balance, and DPD90+ is not a legal default definition. The data contain no real borrower or employer information.
+
+A useful next exercise is to compare cohorts within each synthetic scenario, always retaining the observed counts and coverage. For predictive work, define a forward target window and prevent observations from the same account leaking across train and test sets.
